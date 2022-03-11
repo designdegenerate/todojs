@@ -8,7 +8,7 @@ function updateCounters() {
 
   //Update completed items
   const itemsDoneLabel = document.querySelector('#itemsDone');
-  const itemsDone = document.querySelectorAll('[checked]');
+  const itemsDone = document.querySelectorAll('[data-checked]');
   itemsDoneLabel.textContent = itemsDone.length;
 
   //Update items not done yet
@@ -61,7 +61,6 @@ function createItem(title) {
   toDoList.appendChild(newLi);
 }
 
-
 document
   .querySelector("form")
   .addEventListener("submit", function addNewItem(event){
@@ -78,6 +77,21 @@ document
     updateCounters();
   });
 
+
+function cleanUpDoneItems() {
+  const itemsDone = document.querySelectorAll('[data-checked]');
+
+  for (var i = itemsDone.length - 1; i >= 0; i--) {
+    itemsDone[i].remove();
+  }
+
+  updateCounters();
+}
+
+//Attach Clean up items function to button
+document
+  .querySelector('#statusBar li button')
+  .addEventListener('click', cleanUpDoneItems);
 
 //Update the counters once upon page load
 updateCounters();
