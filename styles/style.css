@@ -74,7 +74,7 @@ ul {
     margin-right: 8px;
 }
 
-[data-checked] {
+[data-checked] label {
     text-decoration: line-through;
     opacity: 0.5;
 }

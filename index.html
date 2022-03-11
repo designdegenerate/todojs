@@ -15,16 +15,17 @@
                 <input type="checkbox" id="toDoItem1" name="toDoItems">
                 <label for="toDoItem1">Sweep the floor</label>
             </li>
-            <li>
+            <li data-checked>
                 <input type="checkbox" id="toDoItem2" name="toDoItems" checked>
-                <label data-checked for="toDoItem1">Dust the vases</label>
+                <label for="toDoItem1">Dust the vases</label>
             </li>
         </ul>
         <ul id='statusBar'>
-            <li>To Do: <span>1</span></li>
-            <li>Done: <span>0</span></li>
-            <li>Total: <span>1</span></li>
+            <li>To Do: <span id='itemsDone'>0</span></li>
+            <li>Done: <span id='itemsNotDone'>0</span></li>
+            <li>Total: <span id='itemsTotal'>0</span></li>
         </ul>
     </main>
+    <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 </html>
