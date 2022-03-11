@@ -36,6 +36,5 @@ function toggleDone(event) {
 const toDoItems = toDoList.querySelectorAll('li input');
 
 for (var i = toDoItems.length - 1; i >= 0; i--) {
-  const toDoItem = toDoItems[i]
-  toDoItem.addEventListener('change', toggleDone);
+  toDoItems[i].addEventListener('change', toggleDone);
 };
