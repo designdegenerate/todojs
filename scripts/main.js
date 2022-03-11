@@ -39,9 +39,6 @@ for (var i = toDoItems.length - 1; i >= 0; i--) {
 };
 
 function createItem(title) {
-  // create a label
-
-  console.log('Added new item:', title);
 
   const itemNum = "todoItem" + parseInt(toDoList.children.length + 1);
   const newLabel = document.createElement('label');
