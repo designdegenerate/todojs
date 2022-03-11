@@ -21,32 +21,21 @@ function updateCounters() {
 updateCounters();
 
 function toggleDone(event) {
-  console.log('test');
 
-  // get the checkbox from the event object
-
-
-/*
-
-  if (checkbox.checked) {
-    // change the checkbox so that it shows up as completed
+  if (this.hasAttribute('checked')) {
+    this.removeAttribute('checked');
+    this.parentElement.removeAttribute('data-checked');
   } else {
-    // change the checkbox so that it shows up as todo
+    this.setAttribute('checked', '');
+    this.parentElement.setAttribute('data-checked', '');
   }
 
-*/
-
-
-  updateCounter();
+  updateCounters();
 }
 
 const toDoItems = toDoList.querySelectorAll('li input');
 
 for (var i = toDoItems.length - 1; i >= 0; i--) {
   const toDoItem = toDoItems[i]
-
-  toDoItem.addEventListener('input', console.log('test'));
+  toDoItem.addEventListener('input', toggleDone);
 };
-
-// add a "change" event listener to every checkbox,
-// and use the "toggleDone" function as the callback
