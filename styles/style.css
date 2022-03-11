@@ -1,0 +1,80 @@
+/***********************************
+ *
+ * Typography
+ *
+ *********************************/
+
+html {
+    font-family: 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+    max-width: 600px;
+    margin: 48px auto;
+    border: 1px solid #000;
+}
+
+h1 {
+    text-align: center;
+}
+
+main input[type="text"] {
+    width: calc(100% + 2px);
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #000;
+    margin: 0 -1px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/***********************************
+ *
+ * ToDo List
+ *
+ *********************************/
+
+#toDoList {
+    margin-top: 48px;
+}
+
+#toDoList li {
+    width: calc(100% + 2px);
+    padding: 16px 8px;
+    border: 1px solid #000;
+    margin: 0 -1px;
+}
+
+#toDoList li + li {
+    margin-top: -1px;
+}
+
+#statusBar {
+    display: flex;
+    background: #333;
+    color: #fff;
+    padding: 12px 16px;
+}
+
+#statusBar li + li {
+    margin-left: 8px;
+}
+
+#statusBar li + li:before {
+    content: '•';
+    margin-right: 8px;
+}
+
+[data-checked] {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
