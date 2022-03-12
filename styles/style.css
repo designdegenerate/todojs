@@ -48,8 +48,10 @@ ul {
 }
 
 #toDoList li {
+    display: flex;
+    align-items: center;
     width: calc(100% + 2px);
-    padding: 16px 8px;
+    padding: 16px;
     border: 1px solid #000;
     margin: 0 -1px;
 }
@@ -80,6 +82,18 @@ ul {
     opacity: 0.5;
 }
 
+[data-overdue] {
+    font-weight: 800;
+    color: #a32838;
+    background: #fee1df;
+}
+
+[data-checked][data-overdue] {
+    background: inherit;
+    color: inherit;
+    font-weight: inherit;
+}
+
 #statusBar button {
     background: transparent;
     border: 1px solid #fff;
@@ -90,4 +104,13 @@ ul {
 #statusBar button:hover {
     opacity: 0.75;
     cursor: pointer;
+}
+
+input[type="checkbox"]{
+    margin: 4px 12px 4px 0;
+}
+
+input[type="date"]{
+    display: inline-block;
+    margin: 0 0 0 auto;
 }
